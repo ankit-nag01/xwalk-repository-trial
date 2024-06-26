@@ -191,16 +191,16 @@
   "fields": [
      {
        "component": "text-area",
-       "name": "quote",
+       "name": "description",
        "value": "",
-       "label": "Quote",
+       "label": "Description",
        "valueType": "string"
      },
      {
        "component": "text-input",
        "valueType": "string",
-       "name": "author",
-       "label": "Author",
+       "name": "fname",
+       "label": "First-Name",
        "value": ""
      }
    ]
