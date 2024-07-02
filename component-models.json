@@ -204,5 +204,52 @@
        "value": ""
      }
    ]
-}
+},
+   {
+	"id": "finance",
+    "fields": [
+	{
+	   "component": "text-area",
+       "name": "title",
+       "value": "",
+       "label": "Title",
+       "valueType": "string"
+	},
+	{
+	   "component": "text-area",
+       "name": "cardTitle",
+       "value": "",
+       "label": "card-Title",
+       "valueType": "string"
+	},
+	{
+	   "component": "text-area",
+       "name": "cardDescription",
+       "value": "",
+       "label": "card-Description",
+       "valueType": "string"
+	},
+	{
+	    "component": "reference",
+        "valueType": "string",
+        "name": "imageDesktopFrame",
+        "label": "Image",
+        "multi": false
+	},
+	{
+	    "component": "reference",
+        "valueType": "string",
+        "name": "imageArrow",
+        "label": "Image",
+        "multi": false
+	},
+	{
+	    "component": "reference",
+        "valueType": "string",
+        "name": "imageMobileFrame",
+        "label": "Image",
+        "multi": false
+	}
+	]	
+   }
 ]
