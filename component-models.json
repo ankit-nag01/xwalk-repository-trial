@@ -204,31 +204,5 @@
        "value": ""
      }
    ]
-   },
-   {
-    "id": "finance",
-    "fields": [
-	{
-       "component": "text-input",
-       "name": "title",
-       "value": "",
-       "label": "Title",
-       "valueType": "string"
-	},
-	{
-       "component": "text-input",
-       "name": "cTitle",
-       "value": "",
-       "label": "Card-Title",
-       "valueType": "string"
-	},
-	{
-       "component": "richtext",
-       "name": "cDescription",
-       "value": "",
-       "label": "Card-Description",
-       "valueType": "string"
-	}
-	]	
    }
 ]
