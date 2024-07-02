@@ -200,7 +200,7 @@
        "component": "text-input",
        "valueType": "string",
        "name": "fname",
-       "label": "First-Name",
+       "label": "First-Name-section",
        "value": ""
      }
    ]
