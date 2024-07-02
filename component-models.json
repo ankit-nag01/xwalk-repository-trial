@@ -204,50 +204,50 @@
        "value": ""
      }
    ]
-},
+   },
    {
 	"id": "finance",
     "fields": [
 	{
-	   "component": "text-area",
+       "component": "text-input",
        "name": "title",
        "value": "",
        "label": "Title",
        "valueType": "string"
 	},
 	{
-	   "component": "text-area",
+       "component": "text-input",
        "name": "cardTitle",
        "value": "",
-       "label": "card-Title",
+       "label": "CardTitle",
        "valueType": "string"
 	},
 	{
-	   "component": "text-area",
+       "component": "richtext",
        "name": "cardDescription",
        "value": "",
-       "label": "card-Description",
+       "label": "CardDescription",
        "valueType": "string"
 	},
 	{
-	    "component": "reference",
+	"component": "reference",
         "valueType": "string",
         "name": "imageDesktopFrame",
-        "label": "Image",
+        "label": "ImageDesktopFrame",
         "multi": false
 	},
 	{
-	    "component": "reference",
+	"component": "reference",
         "valueType": "string",
         "name": "imageArrow",
-        "label": "Image",
+        "label": "ImageArrow",
         "multi": false
 	},
 	{
-	    "component": "reference",
+	"component": "reference",
         "valueType": "string",
         "name": "imageMobileFrame",
-        "label": "Image",
+        "label": "ImageMobileFrame",
         "multi": false
 	}
 	]	
