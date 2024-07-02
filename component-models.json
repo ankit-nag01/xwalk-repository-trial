@@ -233,7 +233,7 @@
 	"component": "reference",
         "valueType": "string",
         "name": "imageDesktopFrame",
-        "label": "ImageDesktopFrame",
+        "label": "Image",
         "multi": false
 	}
 	]	
