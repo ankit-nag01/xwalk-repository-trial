@@ -206,7 +206,7 @@
    ]
    },
    {
-	"id": "finance",
+    "id": "finance",
     "fields": [
 	{
        "component": "text-input",
@@ -217,16 +217,16 @@
 	},
 	{
        "component": "text-input",
-       "name": "cardTitle",
+       "name": "cTitle",
        "value": "",
-       "label": "CardTitle",
+       "label": "Card-Title",
        "valueType": "string"
 	},
 	{
        "component": "richtext",
-       "name": "cardDescription",
+       "name": "cDescription",
        "value": "",
-       "label": "CardDescription",
+       "label": "Card-Description",
        "valueType": "string"
 	}
 	]	
