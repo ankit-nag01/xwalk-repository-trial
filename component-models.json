@@ -204,5 +204,52 @@
        "value": ""
      }
    ]
-   }
+   },
+  {
+    "id": "finance-card",
+    "fields": [
+      {
+        "component": "text-area",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text-area",
+        "name": "cardTitle",
+        "value": "",
+        "label": "Card Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "cardDescription",
+        "value": "",
+        "label": "Card Description",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "imageDesktopFrame",
+        "label": "Frame Image Desktop",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "imageArrow",
+        "label": "Arrow Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "imageMobFrame",
+        "label": "Frame Image Mobile",
+        "multi": false
+      }
+    ]
+  }
 ]
