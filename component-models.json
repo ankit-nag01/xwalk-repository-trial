@@ -235,20 +235,6 @@
         "name": "imageDesktopFrame",
         "label": "ImageDesktopFrame",
         "multi": false
-	},
-	{
-	"component": "reference",
-        "valueType": "string",
-        "name": "imageArrow",
-        "label": "ImageArrow",
-        "multi": false
-	},
-	{
-	"component": "reference",
-        "valueType": "string",
-        "name": "imageMobileFrame",
-        "label": "ImageMobileFrame",
-        "multi": false
 	}
 	]	
    }
