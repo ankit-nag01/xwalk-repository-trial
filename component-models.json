@@ -228,13 +228,6 @@
        "value": "",
        "label": "CardDescription",
        "valueType": "string"
-	},
-	{
-	"component": "reference",
-        "valueType": "string",
-        "name": "imageDesktopFrame",
-        "label": "Image",
-        "multi": false
 	}
 	]	
    }
