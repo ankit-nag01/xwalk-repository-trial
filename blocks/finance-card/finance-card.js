@@ -31,6 +31,11 @@ imageMobFrameEl
 const customFinanceBlockContent = getFinanceCard();
 console.log('my custom data +++++' , customFinanceBlockContent);
 
+console.log('my custom data @@@@@' , customFinanceBlockContent);
+
+console.log('checking the title' , `${titleHeading}`);
+console.log('checking the title new' , `${titleHeading.titleEl}`);
+
 //Now constructing the HTML
 
 const containerBlock = document.createElement('div');
@@ -84,11 +89,11 @@ col.appendChild(frameMobImg);
 //      block.appendChild(containerBlock);
 //     });
 
- block.innerHTML = '';
+// block.innerHTML = '';
 // block.appendChild(containerBlock);
 
 document.addEventListener('DOMContentLoaded', () => {
-   // block.innerHTML = '';
+    block.innerHTML = '';
     block.appendChild(containerBlock);
 } )
 
