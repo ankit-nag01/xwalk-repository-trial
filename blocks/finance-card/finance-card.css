@@ -1,0 +1,277 @@
+
+.container_block{
+    width: 360px;
+    height: 600px;
+    background: #FFF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container_block h1{
+    width: 272px;
+    color: red;
+    line-height: 32px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.row{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.col-sm-3{
+    width: 320px !important;
+    height: 160px !important;
+    flex-shrink: 0 !important;
+    backdrop-filter: blur(5px);
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 16px;
+}
+
+
+/* .row .col-sm-3:nth-child(2) {
+    background-color: yellow;
+} */
+
+.col-sm-3:nth-child(1){
+    background-color: #2648F4;
+}
+
+.col-sm-3:nth-child(2){
+    background-color:#1C2E88;
+}
+
+.col-sm-3:nth-child(3){
+    background-color: #171D9B;
+}
+
+.col-sm-3:nth-child(n) h3{
+    width: 239px;
+    height: 32px;
+    margin-left: 12px;
+    margin-bottom: 8px;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "Anek Devanagari";
+    display: flex;
+}
+
+.col-sm-3:nth-child(n) hr{
+    width: 160px;
+    height: 1px;
+    margin-left: 12px;
+    margin-bottom: 8px;
+}
+
+.col-sm-3:nth-child(n) p{
+    width: 160px;
+    height: 31px;
+    margin-left: 12px;
+    margin-bottom: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.finance_arrow{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color:  rgba(255, 255, 255, 0.20);
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-left: 255px;
+
+    display: inline;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.leasing_frame{
+    width: 56px;
+    height: 56px;
+    margin-top: -42px;
+    margin-left: 264px;
+
+}
+
+.finance_frame{
+    margin-top: -42px;
+    margin-left: 272px;
+    width: 48px;
+    height: 48px;
+}
+
+.subscribing_frame{
+    width: 52.912px;
+    height: 51px;
+    margin-top: -126px;
+    margin-left: 266px;
+}
+
+.leasing_frame_desktop, .finance_frame_desktop, .subscribing_frame_desktop{
+    display: none;
+}
+
+.card__leasing, .card__smart-finance, .card__subscribing{
+    margin-top: 72px;
+}
+
+/*Mobile Device changes ENDS Here */
+
+
+
+@media (min-width: 999px){
+
+    .container_block{
+        width: 1236px;
+        height: 324px;
+        /* padding-left: 66px;
+        padding-right: 66px; */
+        /* margin: 0 auto; */
+    }
+
+    .container_block h1{
+        width: 611px;
+        color: #000;
+        line-height: 44px;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 800;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: "Anek Latin";
+        margin-bottom: 40px;
+    }
+
+
+    .col-sm-3{
+        width: 399px !important;
+        height: 240px !important;
+        /* padding: 10px; */
+        box-sizing: border-box;
+        position: relative;
+        transition: all 0.3s ease;
+        flex: 0 0 32%;
+    }
+
+    .row{
+        gap: 17px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 1236px;
+    }
+
+    .finance_arrow{
+        display: none;
+        margin-left: 240px;
+    }
+
+    .leasing_frame,.finance_frame,.subscribing_frame{
+        display: none;
+    }
+
+
+
+    /* .card__leasing, .card__smart-finance, .card__subscribing{
+        margin-top: 75px;
+    } */
+
+    .card__leasing{
+        margin-top: 75px;
+    }
+
+    .card__smart-finance, .card__subscribing{
+        margin-top: 133px;
+    }
+
+    .col-sm-3:nth-child(n) h3{
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: "Anek Latin";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .col-sm-3:nth-child(n) hr{
+        width: 240px;
+        height: 1px;
+        background: #FFF;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .col-sm-3:nth-child(n) p{
+        display: flex;
+        width: 212px;
+        height: 24px;
+        flex-direction: column;
+        justify-content: center;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 28px;
+        margin-top: 16px;
+    }
+
+    .leasing_frame_desktop{
+        display: inline;
+        margin-left: 253px;
+    }
+
+    .col-sm-3:hover{
+        cursor: pointer;
+        background-image: url("images/bg-img.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.7;
+        z-index: 1;
+        background-color: rgba(33, 43, 95, 0.10);
+
+    }
+
+    .col-sm-3:hover .leasing_frame_desktop{
+        visibility: hidden;
+    }
+
+    .col-sm-3:hover .finance_arrow{
+        display: inline;
+        position: absolute;
+        margin-left: -64px;
+        /* margin-left: 164px; */
+        margin-top: 16px;
+        background-color: #171C8F;
+        box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .col-sm-3:nth-child(2):hover .finance_arrow{
+        margin-left: 246px;
+    }
+
+    .col-sm-3:nth-child(3):hover .finance_arrow{
+        margin-left: 246px;
+    }
+
+
+}
