@@ -8,7 +8,7 @@ imageDesktopFrameEl,
 imageArrowEl,
 imageMobFrameEl
 ] = block.children
-
+ 
  const titleHeading = titleEl?.textContent?.trim() || "";
  const cardTitle = cardTitleEl?.textContent?.trim() || "";
  const cardDescription = cardDescriptionEl?.textContent?.trim() || "";
@@ -78,18 +78,7 @@ frameMobImg.className = 'leasing_frame';
 frameMobImg.src = customFinanceBlockContent.imgMobFrame;
 col.appendChild(frameMobImg);
 
-//block.appendChild(containerBlock);
-
-// document.addEventListener('DOMContentLoaded', () => {
-//      block.appendChild(containerBlock);
-//     });
-
-// block.innerHTML = '';
-// block.appendChild(containerBlock);
-
-document.addEventListener('DOMContentLoaded', () => {
-    block.innerHTML = '';
-    block.appendChild(containerBlock);
-} )
+block.innerHTML = '';
+block.appendChild(containerBlock);
 
 }
