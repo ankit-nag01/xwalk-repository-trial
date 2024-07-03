@@ -31,11 +31,6 @@ imageMobFrameEl
 const customFinanceBlockContent = getFinanceCard();
 console.log('my custom data +++++' , customFinanceBlockContent);
 
-console.log('my custom data @@@@@' , customFinanceBlockContent);
-
-console.log('checking the title' , `${titleHeading}`);
-console.log('checking the title new' , `${titleHeading.titleEl}`);
-
 //Now constructing the HTML
 
 const containerBlock = document.createElement('div');
