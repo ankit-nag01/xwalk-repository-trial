@@ -71,7 +71,7 @@ cardLeasing.appendChild(hr);
 
 const p = document.createElement('p');
 p.textContent = customFinanceBlockContent.cardDescription;
-cardLeasing.appendChild('p');
+cardLeasing.appendChild(p);
 
 const frameMobImg = document.createElement('div');
 frameMobImg.className = 'leasing_frame';
