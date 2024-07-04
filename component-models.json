@@ -249,6 +249,13 @@
         "name": "imageMobFrame",
         "label": "Frame Image Mobile",
         "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bgImage",
+        "label": "Frame Background Image",
+        "multi": false
       }
     ]
   }

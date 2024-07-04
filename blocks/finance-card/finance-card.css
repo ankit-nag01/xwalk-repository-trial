@@ -1,6 +1,6 @@
 
 .container_block{
-    width: 360px;
+    width: 324px;
     height: 600px;
     background: #FFF;
     padding-left: 20px;
@@ -98,7 +98,7 @@
     align-items: center;
     width: 48px;
     height: 48px;
-    margin-left: 255px;
+    margin-left: 202px;
 
     display: inline;
     position: absolute;
@@ -142,8 +142,8 @@
 @media (min-width: 999px){
 
     .container_block{
-        width: 1236px;
-        height: 324px;
+        width: 1200px;
+        height: 340px;
         /* padding-left: 66px;
         padding-right: 66px; */
         /* margin: 0 auto; */
@@ -216,14 +216,14 @@
         width: 240px;
         height: 1px;
         background: #FFF;
-        margin-top: 16px;
+        margin-top: 12px;
         margin-bottom: 16px;
     }
 
     .col-sm-3:nth-child(n) p{
         display: flex;
         width: 212px;
-        height: 24px;
+        height: 17px;
         flex-direction: column;
         justify-content: center;
         color: #FFF;
@@ -237,12 +237,12 @@
 
     .leasing_frame_desktop{
         display: inline;
-        margin-left: 253px;
+        margin-left: 238px;
     }
 
     .col-sm-3:hover{
         cursor: pointer;
-        background-image: url("images/bg-img.png");
+        /* background-image: url("/aem/assetdetails.html/content/dam/xwalk-ank/bg-img.png"); */
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.7;
@@ -258,9 +258,9 @@
     .col-sm-3:hover .finance_arrow{
         display: inline;
         position: absolute;
-        margin-left: -64px;
+        margin-left: 230px;
         /* margin-left: 164px; */
-        margin-top: 16px;
+        margin-top: -51px;
         background-color: #171C8F;
         box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     }

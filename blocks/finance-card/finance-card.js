@@ -8,13 +8,18 @@ imageDesktopFrameEl,
 imageArrowEl,
 imageMobFrameEl
 ] = block.children
- 
+
  const titleHeading = titleEl?.textContent?.trim() || "";
  const cardTitle = cardTitleEl?.textContent?.trim() || "";
  const cardDescription = cardDescriptionEl?.textContent?.trim() || "";
- const imgDeskFrame = imageDesktopFrameEl?.textContent?.trim() || "";
- const imgArr = imageArrowEl?.textContent?.trim() || "";
- const imgMobFrame = imageMobFrameEl?.textContent?.trim() || "";
+ const imgElement = imageDesktopFrameEl.querySelector('img');
+ const imgDeskFrame = imgElement?.getAttribute('src')?.trim() || "";
+
+ const arrElement = imageArrowEl.querySelector('img');
+ const imgArr = arrElement?.getAttribute('src')?.trim() || "";
+
+ const mobElement = imageMobFrameEl.querySelector('img');
+ const imgMobFrame = mobElement?.getAttribute('src')?.trim() || "";
 
  return{
  titleHeading,
@@ -25,14 +30,10 @@ imageMobFrameEl
  imgMobFrame
  };
 }
-
 //get the content from the Block
-
 const customFinanceBlockContent = getFinanceCard();
-console.log('my custom data +++++' , customFinanceBlockContent);
 
 //Now constructing the HTML
-
 const containerBlock = document.createElement('div');
 containerBlock.className = 'container_block';
 
@@ -80,5 +81,21 @@ col.appendChild(frameMobImg);
 
 block.innerHTML = '';
 block.appendChild(containerBlock);
+
+
+const cardBlock = containerBlock.querySelector('.col-sm-3');
+const bgImageBlock = customFinanceBlockContent.imgArr;
+
+  cardBlock.addEventListener('mouseenter', function() {
+    //cardBlock.style.backgroundColor = 'red';
+    cardBlock.style.backgroundImage = `url("${bgImageBlock}")`;
+    cardBlock.style.backgroundSize = 'cover'; // Optionally, set background size
+    cardBlock.style.backgroundPosition = 'center';
+  });
+
+  cardBlock.addEventListener('mouseleave', function(){
+    cardBlock.style.backgroundImage = '';
+    // cardBlock.style.backgroundColor = '#2648F4';
+  })
 
 }
