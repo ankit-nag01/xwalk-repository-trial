@@ -6,7 +6,8 @@ cardTitleEl,
 cardDescriptionEl,
 imageDesktopFrameEl,
 imageArrowEl,
-imageMobFrameEl
+imageMobFrameEl,
+bgImageEl
 ] = block.children
 
  const titleHeading = titleEl?.textContent?.trim() || "";
@@ -21,13 +22,17 @@ imageMobFrameEl
  const mobElement = imageMobFrameEl.querySelector('img');
  const imgMobFrame = mobElement?.getAttribute('src')?.trim() || "";
 
+ const bgImgElement = bgImageEl.querySelector('img');
+ const bgImgFrame = bgImgElement?.getAttribute('src')?.trim() || "";
+
  return{
  titleHeading,
  cardTitle,
  cardDescription,
  imgDeskFrame,
  imgArr,
- imgMobFrame
+ imgMobFrame,
+ bgImgFrame
  };
 }
 //get the content from the Block
@@ -74,17 +79,23 @@ const p = document.createElement('p');
 p.textContent = customFinanceBlockContent.cardDescription;
 cardLeasing.appendChild(p);
 
-const frameMobImg = document.createElement('div');
+const frameMobImg = document.createElement('img');
 frameMobImg.className = 'leasing_frame';
 frameMobImg.src = customFinanceBlockContent.imgMobFrame;
 col.appendChild(frameMobImg);
+
+const frameBg = document.createElement('img');
+frameBg.className = 'leasing_frame-bg';
+frameBg.src = customFinanceBlockContent.bgImgFrame;
+col.appendChild(frameBg);
+
 
 block.innerHTML = '';
 block.appendChild(containerBlock);
 
 
 const cardBlock = containerBlock.querySelector('.col-sm-3');
-const bgImageBlock = customFinanceBlockContent.imgArr;
+const bgImageBlock = customFinanceBlockContent.bgImgFrame;
 
   cardBlock.addEventListener('mouseenter', function() {
     //cardBlock.style.backgroundColor = 'red';
