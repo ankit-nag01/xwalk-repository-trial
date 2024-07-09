@@ -271,7 +271,7 @@
       },
       {
         "component": "text-area",
-        "name": "link-item",
+        "name": "linkItem",
         "value": "",
         "label": "Link-Item",
         "valueType": "string",
