@@ -87,6 +87,7 @@ col.appendChild(frameMobImg);
 const frameBg = document.createElement('img');
 frameBg.className = 'leasing_frame-bg';
 frameBg.src = customFinanceBlockContent.bgImgFrame;
+frameBg.style.visibility = 'hidden';
 col.appendChild(frameBg);
 
 
@@ -100,13 +101,13 @@ const bgImageBlock = customFinanceBlockContent.bgImgFrame;
   cardBlock.addEventListener('mouseenter', function() {
     //cardBlock.style.backgroundColor = 'red';
     cardBlock.style.backgroundImage = `url("${bgImageBlock}")`;
-    cardBlock.style.backgroundSize = 'cover'; // Optionally, set background size
+    cardBlock.style.backgroundSize = 'cover'; 
     cardBlock.style.backgroundPosition = 'center';
   });
 
   cardBlock.addEventListener('mouseleave', function(){
     cardBlock.style.backgroundImage = '';
-    // cardBlock.style.backgroundColor = '#2648F4';
+    
   })
 
 }
