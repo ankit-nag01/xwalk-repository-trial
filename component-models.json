@@ -258,5 +258,25 @@
         "multi": false
       }
     ]
+  },
+  {
+    "id": "header-section",
+    "fields": [
+      {
+        "component": "text-area",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text-area",
+        "name": "link-item",
+        "value": "",
+        "label": "Link-Item",
+        "valueType": "string",
+        "multi": false
+      }
+    ]
   }
 ]
