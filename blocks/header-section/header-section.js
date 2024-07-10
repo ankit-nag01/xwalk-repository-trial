@@ -8,13 +8,15 @@ function getHeaderSection(){
  const title = titleEl?.textContent?.trim() || "";
  const linkItems = linkItemEl?.textContent?.trim() || "";
 
+
  return {
   title,
   linkItems,
  };
 
+ console.log("my title value is", title);
+
 }
-console.log("my value id",linkItems);
 
 const headerBar = getHeaderSection(block);
 // const menuItem = [];
