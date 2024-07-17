@@ -407,24 +407,5 @@
         ]
       }
     ]
-  },
-  {
-    "id": "banner",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "pre-title",
-        "value": "",
-        "label": "Pre-Title",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "title",
-        "value": "",
-        "label": "Title",
-        "valueType": "string"
-      }
-    ]
   }
 ]
