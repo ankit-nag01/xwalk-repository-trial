@@ -284,7 +284,7 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "pre-title",
+        "name": "pretitle",
         "value": "",
         "label": "Pre-Title",
         "valueType": "string"
