@@ -409,7 +409,7 @@
     ]
   },
   {
-    "id": "bannerTest",
+    "id": "banner",
     "fields": [
       {
         "component": "richtext",
