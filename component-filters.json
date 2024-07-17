@@ -37,6 +37,12 @@
     ]
   },
   {
+    "id": "banner",
+    "components": [
+      "car-Image"
+    ]
+  },
+  {
   "id": "section",
   "components": [
     "text",
@@ -48,7 +54,8 @@
     "columns",
     "quote",
     "finance-card",
-    "header-section"
+    "header-section",
+    "banner"
    ]
 }
 ]
