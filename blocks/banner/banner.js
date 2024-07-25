@@ -1,93 +1,52 @@
-import utility from '../../utility/utility.js';
-
 export default function decorate(block){
-  function getBannerContent(){
-    const[
-      pretitleEl,
-      titleEl,
-      ...carCardBlockListEl
-    ] = block.children;
-
-    const preTitle = pretitleEl?.textContent?.trim() || "";
-    const title = titleEl?.textContent?.trim() || "";
-
-    const cardList = Array.from(carCardBlockListEl).map((carCardBlockList) => {
+  function getBannerCard(){
       const[
-        carImageEl,
-        priceEl,
-        ctaText1El,
-        ctaLink1El,
-        ctaTarget1El,
-        ctaText2El,
-        ctaLink2El,
-        ctaTarget2El
-      ] = carCardBlockList.children;
+          pretitleEl,
+          titleEl,
+          carImageEl,
+          priceEl,
+          priceTypeEl,
+          ctaText1El,
+          ctaLink1El,
+          ctaTarget1El,
+          ctaText2El,
+          ctaLink2El,
+          ctaTarget2El
+      ] = block.children
 
-        const image = carImageEl?.querySelector('picture');
-        if (image) {
-          const img = image?.querySelector('img');
-          if (img) {
-            img.removeAttribute('width');
-            img.removeAttribute('height');
-          }
-        }
-        const carPrice = priceEl?.textContent?.trim() || "";
-        const ctaText1 = ctaText1El?.textContent?.trim() || "";
-        const linkAnchor1 = ctaLink1El?.querySelector('a')?.href || '#';
-        const linkTarget1 = ctaTarget1El?.querySelector('a')?.target || '_self';
-        const ctaText2 = ctaText2El?.textContent?.trim() || "";
-        const linkAnchor2 = ctaLink2El?.querySelector('a')?.href || '#';
-        const linkTarget2 = ctaTarget2El?.querySelector('a')?.target || '_self';
+      const pretitle = pretitleEl?.textContent?.trim() || "";
+      const title = titleEl?.textContent?.trim() || "";
+      const carImageElement = carImageEl.querySelector('img');
+      const carImage = carImageElement.getAttribute('src').trim() || "";
 
-        return{
-          imgSrc: carImageEl?.querySelector('img')?.src || '',
-          carPrice,
-          ctaText1,
-          linkAnchor1,
-          linkTarget1,
-          ctaText2,
-          linkAnchor2,
-          linkTarget2,
-          carCardBlockList
-        };
-    });
+      const price = priceEl?.textContent?.trim() || "";
+      console.log("my price value is",priceEl);
+      const priceType = priceTypeEl?.textContent?.trim() || "";
+      const ctatextFirst = ctaText1El?.textContent?.trim() || "";
+      const ctaLinkFirst = ctaLink1El?.textContent?.trim() || "";
+      const ctaTaregetFirst = ctaTarget1El?.textContent?.trim() || "";
+      const ctaTextSecond = ctaText2El?.textContent?.trim() || "";
+      const ctaLinkSecond = ctaLink2El?.textContent?.trim() || "";
+      const ctaTargetSecond = ctaTarget2El?.textContent?.trim() || "";
 
-    return{
-      preTitle,
+      return{
+      pretitle,
       title,
-      cardList,
-    };
+      carImage,
+      price,
+      priceType,
+      ctatextFirst,
+      ctaLinkFirst,
+      ctaTaregetFirst,
+      ctaTextSecond,
+      ctaLinkSecond,
+      ctaTargetSecond
+      };
+
   }
 
-  const bannerContent = getBannerContent();
+  const bannerBar = getBannerCard(block);
 
   const bannerHTML = `
-  <div class="banner-section">
-    <div class="heading">
-      <div class="pretitle">${bannerContent.preTitle}</div>
-      <div class="title">${bannerContent.title}</div>
-	</div>
-        <div class="car-cards">
-          ${bannerContent.cardList.map(card => `
-            <div class="car-card">
-              <div class="car-image">
-                <img src="${card.imgSrc}" alt="Car Image">
-              </div>
-              <div class="car-price">${card.carPrice}</div>
-			  <hr>
-              <div class="cta-buttons">
-                <a href="${card.linkAnchor1}" target="${card.linkTarget1}" class="cta-button1">${card.ctaText1}</a>
-                <a href="${card.linkAnchor2}" target="${card.linkTarget2}" class="cta-button2">${card.ctaText2}</a>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-  
-  `;
-  block.innerHTML = utility.sanitizeHtml(`
-    <div class="banner-wrapper__container">
-    ${bannerHTML}
-    </div>
-    `);
+  `
 }

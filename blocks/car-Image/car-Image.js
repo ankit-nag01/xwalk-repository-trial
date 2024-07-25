@@ -61,3 +61,4 @@ export default function carCard(block){
     block.innerHTML = carImageHTML;
 }
 
+ 
