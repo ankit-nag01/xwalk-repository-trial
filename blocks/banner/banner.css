@@ -1,16 +1,87 @@
+
 .banner-section{
-    background-color: brown;
+    width: 1200px;
+    height: 520px;
+    background-color: grey;
+    opacity: 0.9;
 }
-
-/* .car-section{
-    height: 501px;
-    width: 1238px;
-    background-color: red;
+.heading{
+    padding: 0px;
+    position: absolute;
+    margin-left: 63px;
+    margin-top: 337px;
+    height: 54px;
+    width: 108px;
+    font-style: normal;
+    color: var(--White, #FFF);
+    font-family: "Anek Latin";
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20.015px;
 }
-
-.bgImage{
-    background-color: aqua;
+.heading .pretitle{
+    margin-bottom: -5px;
 }
-.carImg{
-    background-color: yellow;
-} */
+.car-image{
+    position: absolute;
+    margin-left: 443px;
+    margin-top: 151px;
+}
+.car-price{
+    position: absolute;
+    margin-top: 383px;
+    margin-left: 57px;
+    color: var(--White, #FFF);
+    font-family: "Anek Latin";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.02px;
+}
+hr{
+    width: 298px;
+    height: 1px;
+    position: absolute;
+    margin-left: 55px;
+    margin-top: 427px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 50%, rgba(255, 255, 255, 0.00) 100%);
+}
+.cta-buttons{
+    width: 138px;
+    height: 38px;
+    background: white;
+    margin-top: 442px;
+    position: absolute;
+    margin-left: 55px;
+}
+.cta-buttons .cta-button1{
+text-align: center;
+color: black;
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 171.429% */
+text-transform: uppercase;
+margin-left: 23px;
+text-decoration: none;
+}
+.cta-buttons .cta-button2{
+    height: 39px;
+    margin-left: 44px;
+    width: 167px;
+    position: absolute;
+    border: 2px solid white;
+    color: var(--White, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px 0px 0px 0px;
+    text-decoration: none;
+}
