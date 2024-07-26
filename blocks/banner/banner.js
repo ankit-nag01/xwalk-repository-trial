@@ -1,4 +1,5 @@
 import utility from '../../utility/utility.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block){
   function getBannerContent(){
@@ -85,9 +86,16 @@ export default function decorate(block){
       </div>
   
   `;
+
   block.innerHTML = utility.sanitizeHtml(`
     <div class="banner-wrapper__container">
     ${bannerHTML}
     </div>
     `);
+
+  // Move instrumentation attributes for each car card
+  bannerContent.cardList.forEach((card, index) => {
+    const newCardEl = block.querySelectorAll('.car-card')[index];
+    moveInstrumentation(card.carCardBlockList, newCardEl);
+  });
 }
