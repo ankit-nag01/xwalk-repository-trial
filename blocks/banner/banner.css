@@ -84,3 +84,20 @@ text-decoration: none;
     padding: 6px 0px 0px 0px;
     text-decoration: none;
 }
+
+.arrow{
+    position: absolute;
+    margin: 553px 0px 0px 480px;
+}
+
+.arrow .pre{
+    background-color: darkblue;
+}
+
+.arrow .nex{
+    background-color: darkblue;
+}
+
+.car-card:nth-child(2){
+    display: none;
+}

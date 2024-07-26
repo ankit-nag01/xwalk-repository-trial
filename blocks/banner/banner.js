@@ -83,6 +83,10 @@ export default function decorate(block){
             </div>
           `).join('')}
         </div>
+        <div class="arrow">
+		<button type="button" class="pre">Previous</button>
+		<button type="button" class="nex">Next</button>
+		</div>
       </div>
   
   `;
@@ -98,4 +102,23 @@ export default function decorate(block){
     const newCardEl = block.querySelectorAll('.car-card')[index];
     moveInstrumentation(card.carCardBlockList, newCardEl);
   });
+
+  const carCardFirst = block.querySelectorAll('.car-card')[0];
+  const carCardSecond = block.querySelectorAll('.car-card')[1];
+
+  const nextButton = block.querySelector('.nex');
+  const prevButton = block.querySelector('.pre');
+
+  nextButton.addEventListener('click', () => {
+    carCardFirst.style.display = 'none';
+    carCardSecond.style.display = 'block';
+    
+  });
+
+  prevButton.addEventListener('click', () => {
+    carCardFirst.style.display = 'block';
+    carCardSecond.style.display = 'none';
+    
+  });
+
 }
