@@ -101,3 +101,11 @@ text-decoration: none;
 .car-card:nth-child(2){
     display: none;
 }
+
+.car-card:nth-child(3) .cta-buttons .cta-button2{
+    margin-left: 63px;
+}
+
+.car-card:nth-child(3){
+    display: none;
+}

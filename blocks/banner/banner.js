@@ -103,22 +103,25 @@ export default function decorate(block){
     moveInstrumentation(card.carCardBlockList, newCardEl);
   });
 
-  const carCardFirst = block.querySelectorAll('.car-card')[0];
-  const carCardSecond = block.querySelectorAll('.car-card')[1];
+  const carCards = block.querySelectorAll('.car-card');
+  let currentCardIndex = 0;
+  carCards.forEach((card, index) => {
+    card.style.display = index === currentCardIndex ? 'block' : 'none';
+  });
 
   const nextButton = block.querySelector('.nex');
   const prevButton = block.querySelector('.pre');
 
   nextButton.addEventListener('click', () => {
-    carCardFirst.style.display = 'none';
-    carCardSecond.style.display = 'block';
-    
+    carCards[currentCardIndex].style.display = 'none';
+    currentCardIndex = (currentCardIndex + 1) % carCards.length;
+    carCards[currentCardIndex].style.display = 'block';
   });
 
   prevButton.addEventListener('click', () => {
-    carCardFirst.style.display = 'block';
-    carCardSecond.style.display = 'none';
-    
+    carCards[currentCardIndex].style.display = 'none';
+    currentCardIndex = (currentCardIndex - 1 + carCards.length) % carCards.length;
+    carCards[currentCardIndex].style.display = 'block';
   });
 
 }
