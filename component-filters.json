@@ -49,12 +49,6 @@
     ]
   },
   {
-    "id": "tab-Items",
-    "components": [
-      "dealer-cards"
-    ]
-  },
-  {
   "id": "section",
   "components": [
     "text",
@@ -68,8 +62,7 @@
     "finance-card",
     "header-section",
     "banner",
-    "dealer-activities",
-    "tab-Items"
+    "dealer-activities"
    ]
 }
 ]
