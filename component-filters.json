@@ -49,6 +49,12 @@
     ]
   },
   {
+    "id": "tab-Items",
+    "components": [
+      "dealer-cards"
+    ]
+  },
+  {
   "id": "section",
   "components": [
     "text",
