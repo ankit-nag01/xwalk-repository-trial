@@ -407,5 +407,148 @@
         ]
       }
     ]
+  },
+  {
+    "id": "dealer-activities",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "sub-title",
+        "value": "",
+        "label": "Sub-Title",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tab-Items",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "dealer-cards",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "cardImage",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "cardHeading",
+        "value": "",
+        "label": "card Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "dealerName",
+        "value": "",
+        "label": "Dealer Name",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "dealerNumber",
+        "value": "",
+        "label": "Dealer Number",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "dealermail",
+        "value": "",
+        "label": "Dealer EmailID",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "dealerDate",
+        "value": "",
+        "label": "Dealer Date",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "dealerTime",
+        "value": "",
+        "label": "Dealer Time",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "videoCallText",
+        "label": "CTA Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "videoCallURL",
+        "label": "CTA Link"
+      },
+      {
+        "component": "select",
+        "name": "videoCallTarget",
+        "value": "",
+        "label": "Open Link in New Page ?",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "_blank"
+          },
+          {
+            "name": "No",
+            "value": "_self"
+          }
+        ]
+      },
+      {
+        "component": "text-input",
+        "name": "btnText",
+        "label": "Button Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "btnURL",
+        "label": "Button Link"
+      },
+      {
+        "component": "select",
+        "name": "btnTarget",
+        "value": "",
+        "label": "Open Link in New Page ?",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "_blank"
+          },
+          {
+            "name": "No",
+            "value": "_self"
+          }
+        ]
+      }
+    ]
   }
 ]
