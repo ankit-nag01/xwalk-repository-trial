@@ -254,7 +254,7 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block/tab",
+                "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Tab-Items",
                   "filter": "tab-Items",
@@ -270,7 +270,7 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block/tab/item",
+                "resourceType": "core/franklin/components/block/v1/block/item/items",
                 "template": {
                   "name": "Dealer-cards",
                   "model": "dealer-cards"
