@@ -45,11 +45,11 @@
   {
     "id": "dealer-activities",
     "components": [
-      "tab-Items"
+      "tab-items"
     ]
   },
   {
-    "id": "tab-Items",
+    "id": "tab-items",
     "components": [
       "dealer-cards"
     ]
