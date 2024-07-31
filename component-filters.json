@@ -45,12 +45,7 @@
   {
     "id": "dealer-activities",
     "components": [
-      "tab-Items"
-    ]
-  },
-  {
-    "id": "tab-Items",
-    "components": [
+      "tab-Items",
       "dealer-cards"
     ]
   },
