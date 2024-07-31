@@ -420,7 +420,7 @@
       },
       {
         "component": "richtext",
-        "name": "sub-title",
+        "name": "subtitle",
         "value": "",
         "label": "Sub-Title",
         "valueType": "string"
