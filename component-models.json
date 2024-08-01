@@ -432,9 +432,23 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "heading",
+        "name": "headingOne",
         "value": "",
-        "label": "Heading",
+        "label": "Heading First",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "headingTwo",
+        "value": "",
+        "label": "Heading Second",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "headingThree",
+        "value": "",
+        "label": "Heading Third",
         "valueType": "string"
       }
     ]
@@ -448,13 +462,6 @@
         "name": "cardImage",
         "label": "Image",
         "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "cardHeading",
-        "value": "",
-        "label": "card Heading",
-        "valueType": "string"
       },
       {
         "component": "richtext",

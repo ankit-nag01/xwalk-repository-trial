@@ -9,9 +9,9 @@ export default function decorate(block) {
     const subtitle = subtitleEl?.textContent?.trim() || "";
     const heading = headingEl?.textContent?.trim() || "";
 
-    function createDealerCard(data, cardIndex) {
+    function createDealerCard(data) {
         return `
-            <div class="card" data-card-index="${cardIndex}">
+            <div class="card" data-category="${data.category}">
                 <div class="image">
                     <img src="${data.image}" alt="carImage" class="car-image" />
                 </div>
@@ -32,24 +32,26 @@ export default function decorate(block) {
             image: "/content/dam/xwalk-ank/image-dealer.png",
             dnews: "Upcoming test drive | Heads up! We have scheduled a test drive on 13th June for Wagon R",
             dhead: "Dealer name 1",
-            dname: "Mayuri Automobile Co. Ltd."
+            dname: "Mayuri Automobile Co. Ltd.",
+            category: "testDrive"
         },
         {
             image: "/content/dam/xwalk-ank/image-dealer.png",
             dnews: "Showroom visit available | Visit our showroom anytime during working hours",
             dhead: "Dealer name 2",
-            dname: "Sanghi Motors"
+            dname: "Sanghi Motors",
+            category: "showroom"
         },
         {
             image: "/content/dam/xwalk-ank/image-dealer.png",
             dnews: "Book your test drive now! | Contact us to schedule a test drive",
             dhead: "Dealer name 3",
-            dname: "Automobile Solutions"
+            dname: "Automobile Solutions",
+            category: "testDrive"
         }
-        
     ];
 
-    const cardsHTML = mockData.map((data, index) => createDealerCard(data, index)).join("");
+    const cardsHTML = mockData.map(data => createDealerCard(data)).join("");
 
     block.innerHTML = `
         <div class="main-container">
@@ -57,20 +59,18 @@ export default function decorate(block) {
                 <div class="titleNew">${title}</div>
                 <div class="subtitleNew">${subtitle}</div>
             </div>
-           
-                <div class="rowNew">
-                    <div class="col-sm-3">
-                        <div class="showroom">Showroom Visit (8)</div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="testDrive">Test Drive (3)</div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="booked">Booked (0)</div>
-                    </div>
-                    <hr>
+            <div class="rowNew">
+                <div class="col-sm-3">
+                    <div class="showroom">Showroom Visit (8)</div>
                 </div>
-            
+                <div class="col-sm-3">
+                    <div class="testDrive">Test Drive (3)</div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="booked">Booked (0)</div>
+                </div>
+                <hr>
+            </div>
             <div class="cards-section">
                 ${cardsHTML}
             </div>
@@ -84,38 +84,27 @@ export default function decorate(block) {
 
     showroomButton.addEventListener('click', () => {
         cards.forEach(card => {
-            const cardIndex = parseInt(card.getAttribute('data-card-index'));
-            if (cardIndex === 0 || cardIndex === 1) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+            const category = card.getAttribute('data-category');
+            card.style.display = category === 'showroom' ? 'block' : 'none';
         });
     });
 
     testDriveButton.addEventListener('click', () => {
         cards.forEach(card => {
-            const cardIndex = parseInt(card.getAttribute('data-card-index'));
-            if (cardIndex === 2) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+            const category = card.getAttribute('data-category');
+            card.style.display = category === 'testDrive' ? 'block' : 'none';
         });
     });
 
-    bookedButton.addEventListener('click', ()=>{
-cards.forEach(card => {
-    const cardIndex = parseInt(card.getAttribute('data-card-index'));
-    if(cardIndex >= 2){
-        card.style.display = 'none';
-    }
-});
+    bookedButton.addEventListener('click', () => {
+        cards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            card.style.display = category === 'booked' ? 'block' : 'none';
+        });
     });
 
-    cards.forEach((card, index) => {
-        if (index > 1) {
-            card.style.display = 'none';
-        }
+    // Initially hide all cards
+    cards.forEach(card => {
+        card.style.display = 'none';
     });
 }
