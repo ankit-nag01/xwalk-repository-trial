@@ -1,0 +1,108 @@
+ .main-container{
+    width: 1238px;
+    height: 620px;
+    background: #EFF0FF;
+    padding: 32px;
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+}
+
+.title-section{
+    width: 1238px;
+    height: 61px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.titleNew{
+    width: 440px;
+    height: 35px;
+    color: #434649;
+    font-family: "Kepler Std";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; 
+    letter-spacing: 0.64px;
+}
+
+.subtitleNew{
+    color: #575A5E;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Anek Latin";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.heading-section {
+    display: flex;
+    width: 1114px;
+    align-items: flex-start;
+  
+}
+
+.rowNew {
+    display: flex;
+    width: 1114px;
+    display: flex;
+    align-items: center;
+}
+
+/* .rowNew .col-sm-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction:row;
+} */
+
+.rowNew .showroom{
+    color: #585858;
+    font-family: "Anek Latin";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 179px;
+    text-align: center;
+    margin-left: -15px;
+}
+
+.rowNew .testDrive{
+    color: #53565A;
+    font-family: "Anek Latin";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 179px;
+    text-align: center;
+    margin-left: -114px;
+}
+
+.rowNew .booked{
+    color: #53565A;
+    font-family: "Anek Latin";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 179px;
+    text-align: center;
+    margin-left: -214px;
+}
+
+.rowNew hr{
+    position: absolute;
+    margin-top: 50px;
+    width: 1156px;
+    margin-left: 2px;
+}
