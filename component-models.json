@@ -432,23 +432,9 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "headingOne",
+        "name": "heading",
         "value": "",
-        "label": "Heading First",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "headingTwo",
-        "value": "",
-        "label": "Heading Second",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "headingThree",
-        "value": "",
-        "label": "Heading Third",
+        "label": "Heading",
         "valueType": "string"
       }
     ]
