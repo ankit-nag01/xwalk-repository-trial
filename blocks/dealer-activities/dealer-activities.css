@@ -1,4 +1,4 @@
- /* .main-container{
+ .main-container{
     width: 1238px;
     height: 620px;
     background: #EFF0FF;
@@ -86,6 +86,7 @@ border-bottom: 2px solid #171C8F;
     width: 179px;
     text-align: center;
     margin-left: -114px;
+    background-color: red;
 }
 
 .rowNew .booked{
@@ -105,4 +106,4 @@ border-bottom: 2px solid #171C8F;
     margin-top: 40px;
     width: 1156px;
     margin-left: 2px;
-} */
+}

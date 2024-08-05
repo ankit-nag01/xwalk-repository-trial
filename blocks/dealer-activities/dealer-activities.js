@@ -1,110 +1,114 @@
-// export default function decorate(block) {
-//     const [
-//         titleEl,
-//         subtitleEl,
-//         headingEl
-//     ] = block.children;
+import utility from '../../utility/utility.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
-//     const title = titleEl?.textContent?.trim() || "";
-//     const subtitle = subtitleEl?.textContent?.trim() || "";
-//     const heading = headingEl?.textContent?.trim() || "";
+export default function decorate(block) {
+    function getDealerContent(){
+    const [
+        titleEl,
+        subtitleEl,
+        ...headingListItemsEl
+    ] = block.children;
 
-//     function createDealerCard(data) {
-//         return `
-//             <div class="card" data-category="${data.category}">
-//                 <div class="image">
-//                     <img src="${data.image}" alt="carImage" class="car-image" />
-//                 </div>
-//                 <div class="items">
-//                     <div class="news">${data.dnews}</div>
-//                     <div class="dname">
-//                         ${data.dhead}
-//                         <br/>
-//                         <b><h4>${data.dname}</h4></b>
-//                     </div>
-//                 </div>
-//             </div>
-//         `;
-//     }
+    const title = titleEl?.textContent?.trim() || "";
+    const subtitle = subtitleEl?.textContent?.trim() || "";
 
-//     const mockData = [
-//         {
-//             image: "/content/dam/xwalk-ank/image-dealer.png",
-//             dnews: "Upcoming test drive | Heads up! We have scheduled a test drive on 13th June for Wagon R",
-//             dhead: "Dealer name 1",
-//             dname: "Mayuri Automobile Co. Ltd.",
-//             category: "testDrive"
-//         },
-//         {
-//             image: "/content/dam/xwalk-ank/image-dealer.png",
-//             dnews: "Showroom visit available | Visit our showroom anytime during working hours",
-//             dhead: "Dealer name 2",
-//             dname: "Sanghi Motors",
-//             category: "showroom"
-//         },
-//         {
-//             image: "/content/dam/xwalk-ank/image-dealer.png",
-//             dnews: "Book your test drive now! | Contact us to schedule a test drive",
-//             dhead: "Dealer name 3",
-//             dname: "Automobile Solutions",
-//             category: "testDrive"
-//         }
-//     ];
+    const headingList = Array.from(headingListItemsEl).map((headingListItems) => {
+      const[
+        headingEl
+      ] = headingListItems.children;
 
-//     const cardsHTML = mockData.map(data => createDealerCard(data)).join("");
+      const heading = headingEl?.textContent?.trim() || "";
 
-//     block.innerHTML = `
-//         <div class="main-container">
-//             <div class="title-section">
-//                 <div class="titleNew">${title}</div>
-//                 <div class="subtitleNew">${subtitle}</div>
-//             </div>
-//             <div class="rowNew">
-//                 <div class="col-sm-3">
-//                     <div class="showroom">Showroom Visit (8)</div>
-//                 </div>
-//                 <div class="col-sm-3">
-//                     <div class="testDrive">Test Drive (3)</div>
-//                 </div>
-//                 <div class="col-sm-3">
-//                     <div class="booked">Booked (0)</div>
-//                 </div>
-//                 <hr>
-//             </div>
-//             <div class="cards-section">
-//                 ${cardsHTML}
-//             </div>
-//         </div>
-//     `;
+      return{
+        heading
+      };
+    });
 
-//     const showroomButton = block.querySelector('.showroom');
-//     const testDriveButton = block.querySelector('.testDrive');
-//     const bookedButton = block.querySelector('.booked');
-//     const cards = block.querySelectorAll('.card');
+    // const cardList = Array.from(cardListItemsEl).map((cardListItems) => {
+    //   const[
+    //     cardImageEl,
+    //     dealerNameEl,
+    //     dealerNumberEl,
+    //     dealermailEl,
+    //     dealerDateEl,
+    //     dealerTimeEl,
+    //     videoCallTextEl,
+    //     videoCallURLEl,
+    //     videoCallTargetEl,
+    //     btnTextEl,
+    //     btnURLEl,
+    //     btnTargetEl
+    //   ] = cardListItems.children;
 
-//     showroomButton.addEventListener('click', () => {
-//         cards.forEach(card => {
-//             const category = card.getAttribute('data-category');
-//             card.style.display = category === 'showroom' ? 'block' : 'none';
-//         });
-//     });
+    //   const image = cardImageEl?.querySelector('picture');
+    //     if (image) {
+    //       const img = image?.querySelector('img');
+    //       if (img) {
+    //         img.removeAttribute('width');
+    //         img.removeAttribute('height');
+    //       }
+    //     } 
+    //   const dname = dealerNameEl?.textContent?.trim() || "";
+    //   const dnumber = dealerNumberEl?.textContent?.trim() || "";
+    //   const dmail = dealermailEl?.textContent?.trim() || "";
+    //   const ddate = dealerDateEl?.textContent?.trim() || "";
+    //   const dtime = dealerTimeEl?.textContent?.trim() || "";
+    //   const vcallText = videoCallTextEl?.textContent?.trim() || "";
+    //   const vcallUrl = videoCallURLEl?.querySelector('a')?.href || '#';
+    //   const vcallTarget = videoCallTargetEl?.querySelector('a')?.target || '_self';
+    //   const btnTxt = btnTextEl?.textContent?.trim() || "";
+    //   const btnUrl = btnURLEl?.querySelector('a')?.href || '#';
+    //   const btnTarget = btnTargetEl?.querySelector('a')?.target || '_self';
 
-//     testDriveButton.addEventListener('click', () => {
-//         cards.forEach(card => {
-//             const category = card.getAttribute('data-category');
-//             card.style.display = category === 'testDrive' ? 'block' : 'none';
-//         });
-//     });
+    //   return{
+    //     imgSrc: cardImageEl?.querySelector('img')?.src || '',
+    //     dname,
+    //     dnumber,
+    //     dmail,
+    //     ddate,
+    //     dtime,
+    //     vcallText,
+    //     vcallUrl,
+    //     vcallTarget,
+    //     btnTxt,
+    //     btnUrl,
+    //     btnTarget
+    //   };
+    // });
 
-//     bookedButton.addEventListener('click', () => {
-//         cards.forEach(card => {
-//             const category = card.getAttribute('data-category');
-//             card.style.display = category === 'booked' ? 'block' : 'none';
-//         });
-//     });
+    return{
+        title,
+        subtitle,
+        headingList,
+        // cardList
+    };
+}
 
-//     // Initially hide all cards
-//     cards.forEach(card => {
-//         card.style.display = 'none';
-//     });
-// }
+
+const dealerContent = getDealerContent();
+
+
+const dealerHTML = `
+<div class="main-container">
+            <div class="title-section">
+                <div class="titleNew">${dealerContent.title}</div>
+                <div class="subtitleNew">${dealerContent.subtitle}</div>
+            </div>
+            <div class="rowNew">
+                ${dealerContent.headingList.map(head => `
+                    <div class="col-sm-3">
+                        <div class="showroom">${head.heading}</div>
+                    </div>
+                `).join('')}
+            </div>
+            <hr/>
+        </div>
+`;
+
+block.innerHTML = utility.sanitizeHtml(`
+    <div class="Dealer__Activities__container">
+    ${dealerHTML}
+    </div>
+    `);
+
+}

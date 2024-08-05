@@ -443,6 +443,13 @@
     "id": "dealer-cards",
     "fields": [
       {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "cardImage",
