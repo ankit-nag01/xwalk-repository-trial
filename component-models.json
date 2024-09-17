@@ -251,5 +251,58 @@
         "multi": false
       }
     ]
+  },
+  {
+    "id": "header-section",
+    "fields": [
+      {
+        "component": "text-area",
+        "name": "logo-title",
+        "value": "",
+        "label": "Logo-Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text-area",
+        "name": "list-item",
+        "value": "5",
+        "label": "Logo-Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text-area",
+        "name": "list-item",
+        "value": "5",
+        "label": "Logo-Items",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "bannerCard",
+    "fields": [
+      {
+        "component": "text-area",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text-area",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "imageBanner",
+        "label": "Banner Image",
+        "multi": false
+      }
+    ]
   }
+
 ]
