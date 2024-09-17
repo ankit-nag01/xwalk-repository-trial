@@ -37,6 +37,19 @@
     ]
   },
   {
+    "id": "banner",
+    "components": [
+      "car-Image"
+    ]
+  },
+  {
+    "id": "dealer-activities",
+    "components": [
+      "tab-Items",
+      "dealer-cards"
+    ]
+  },
+  {
   "id": "section",
   "components": [
     "text",
@@ -46,10 +59,7 @@
     "hero",
     "cards",
     "columns",
-    "quote",
-    "finance-card",
-    "header-section",
-    "bannerCard"
+    "quote"
    ]
 }
 ]
